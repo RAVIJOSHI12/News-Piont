@@ -3,7 +3,6 @@ import Newsitems from './Newsitems'
 import Loader from './Loader';
 import PropTypes from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component";
-// document.title=`${props.category}-Newspoint`;
 
 const News =(props)=>{
   const [articles, setArticles] = useState([])
@@ -30,15 +29,7 @@ const News =(props)=>{
       // eslint-disable-next-line 
     }, [])
 
-    // const handleonprevious=async()=>{
-    //   setPage(page-1)
-    //   updatenews();
-    // }  
-
-    // const handleonnext=async()=>{
-    //   setPage(page+1)
-    //   updatenews();
-    // }
+    
 
     const fetchMoreData =async() => {
       const url=`https://newsapi.org/v2/top-headlines?country=us&category=${props.category}&apiKey=94408ab5de1c4127bed0a8b0dd24640b&page=${page+1}&pagesize=${props.pagesize}`
@@ -67,8 +58,6 @@ const News =(props)=>{
                   </div> 
                 })} 
                </div>
-                  {/* <button type="button" className="btn btn-dark" onClick={handleonprevious}>Previous</button>
-                  <button type="button" className="btn btn-dark"   onClick={handleonnext}>Next</button> */}
            </div>
 
         </InfiniteScroll>

@@ -13,7 +13,6 @@ import { useState } from 'react';
 
 const App=()=>{
   const pageSize=6;
-  // const apikey="94408ab5de1c4127bed0a8b0dd24640b"
 
   const [progress, setProgress] = useState(0)
   
